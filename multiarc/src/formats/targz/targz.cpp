@@ -474,7 +474,7 @@ BOOL WINAPI _export TARGZ_GetFormatName(int Type,char *FormatName,char *DefaultE
     case GZ_FORMAT:
     case Z_FORMAT:
     case BZ_FORMAT:
-	case XZ_FORMAT:
+    case XZ_FORMAT:
       strcpy(FormatName,FmtAndExt[Type][0]);
       strcpy(DefaultExt,FmtAndExt[Type][1]);
       return(TRUE);
@@ -558,7 +558,7 @@ BOOL WINAPI _export TARGZ_GetDefaultCommands(int Type,int Command,char *Dest)
        "bzip2 %%fq",
        "*"
      },
-     { // BZ_FORMAT
+     { // XZ_FORMAT
        "xz -cd %%A >%%fq",
        "xz -cd %%A >%%fq",
        "xz -cd %%A >/dev/null",

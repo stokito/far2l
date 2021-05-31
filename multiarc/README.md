@@ -10,9 +10,11 @@ Second-level archive support plugins must export the following functions:
 Called when second-level plugin module is loaded. This function
 is optional and may be omitted.
 
+```cpp
 DWORD WINAPI _export LoadFormatModule(
   const char *ModuleName
 );
+```
 
 Parameters:
   ModuleName - name of the second-level plugin module
@@ -23,11 +25,13 @@ Return value:
 ----------------------------------------------------------------------------
 Checks if the given archive file is supported by the plugin or not.
 
+```cpp
 BOOL WINAPI IsArchive(
   const char *Name,
   const unsigned char *Data,
   int DataSize
 );
+```
 
 Parameters:
   Name     - archive name

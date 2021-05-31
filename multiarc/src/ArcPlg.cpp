@@ -91,7 +91,10 @@ ArcPlugins::ArcPlugins(const char *ModuleName) : PluginsData(NULL), PluginsCount
 		
 	AddPluginItem("7z", SEVENZ_IsArchive, SEVENZ_OpenArchive, SEVENZ_GetArcItem, NULL, 
 		SEVENZ_CloseArchive, SEVENZ_GetFormatName, SEVENZ_GetDefaultCommands, NULL, NULL);
-		
+
+    AddPluginItem("ZStandard", ZSTD_IsArchive, ZSTD_OpenArchive, ZSTD_GetArcItem, NULL,
+         ZSTD_CloseArchive, ZSTD_GetFormatName, ZSTD_GetDefaultCommands, NULL, NULL);
+
 	FSF.qsort(PluginsData,PluginsCount,sizeof(struct PluginItem),(FCMP)CompareFmtModules);
 }
 
